@@ -33,5 +33,13 @@ public class Notebook extends Computador{
 
     public void setPeso(int peso) {
         this.peso = peso;
-    }   
+    }
+
+    @Override
+    public String toString() {
+        
+        return super.toString() +", Notebook, " + "Dimensiones Pantalla= " + dimensionesPantalla + ", Peso en gr.= " + peso;
+    }
+    
+    
 }

@@ -5,6 +5,8 @@
  */
 package solemne3_katherinenussbaum;
 
+import solemne3_katherinenussbaum.repositorio.NotebookSet;
+
 /**
  *
  * @author knussbaum
@@ -15,7 +17,7 @@ public class Solemne3_KatherineNussbaum {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }

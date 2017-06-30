@@ -65,5 +65,10 @@ public abstract class Computador {
         this.precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return "Computador: " + "Id= " + id + ", RAM= " + ram + ", Procesador= " + procesador + ", Disco Duro= " + discoDuro + ", Precio= " + precio ;
+    }
+
     
 }

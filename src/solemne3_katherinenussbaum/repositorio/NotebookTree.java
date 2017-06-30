@@ -5,7 +5,7 @@
  */
 package solemne3_katherinenussbaum.repositorio;
 import java.util.Iterator;
-import java.util.TreeSet;
+import java.util.TreeMap;
 import solemne3_katherinenussbaum.clases.Notebook;
 /**
  *
@@ -18,23 +18,22 @@ public class NotebookTree {
     Notebook n3 = new Notebook(3,"4 GB","Intel Core i3","500 GB", 2999990,"14 pulgadas", 1730);
     Notebook n4 = new Notebook(4,"4 GB","Intel Core I3","1 TB", 399990,"15,6 pulgadas", 1900);
     
-    TreeSet<Notebook> listaNotebook;
+    static TreeMap listaNotebook = new TreeMap();
         
-    private NotebookTree()
+    public NotebookTree()
     {
-        this.listaNotebook = new TreeSet();
-        listaNotebook.add(n1);
-        listaNotebook.add(n2);
-        listaNotebook.add(n3);
-        listaNotebook.add(n4);
+        listaNotebook.put(1, n1);
+        listaNotebook.put(2, n2);
+        listaNotebook.put(3, n3);
+        listaNotebook.put(4, n4);
     }
              
-    public void agregarNotebook(Notebook notebook){
-        listaNotebook.add(notebook);
+    public void agregarNotebook(int num, Notebook notebook){
+        listaNotebook.put(num, notebook);
     }
     
     public void listarNotebooks(){
-        Iterator i = listaNotebook.iterator();
+        Iterator i = listaNotebook.values().iterator();
         while(i.hasNext()){
             System.out.println(i.next());
         }
